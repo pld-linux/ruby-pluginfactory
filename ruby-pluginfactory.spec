@@ -2,6 +2,7 @@
 %define ruby_rubylibdir %(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
 %define	ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
 Summary:	Ruby PluginFactory pattern
+Summary(pl):	Wzorzec PluginFactory w Rubym
 Name:		ruby-pluginfactory
 Version:	1.0.1
 Release:	1
@@ -20,11 +21,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Ruby implementation of the PluginFactory pattern.
 
+%description -l pl
+Implementacja wzorca PluginFactory w jêzyku Ruby.
+
 %prep
 %setup -q -n PluginFactory-%{version}
 
 %build
-
 cp %{SOURCE1} .
 
 ruby setup.rb config \
