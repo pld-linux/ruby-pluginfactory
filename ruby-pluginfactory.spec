@@ -31,8 +31,8 @@ Implementacja wzorca PluginFactory w jêzyku Ruby.
 cp %{SOURCE1} .
 
 ruby setup.rb config \
-	--rb-dir=%{ruby_rubylibdir} \
-	--so-dir=%{ruby_archdir}
+	--siterubyver=%{ruby_rubylibdir} \
+	--sodir=%{ruby_archdir}
 
 ruby setup.rb setup
 
