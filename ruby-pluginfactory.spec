@@ -1,6 +1,3 @@
-%define	ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"], "system")')
-%define ruby_rubylibdir %(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
-%define	ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
 Summary:	Ruby PluginFactory pattern
 Summary(pl):	Wzorzec PluginFactory w Rubym
 Name:		ruby-pluginfactory
@@ -12,6 +9,7 @@ Source0:	http://www.deveiate.org/code/PluginFactory-%{version}.tar.gz
 # Source0-md5:	fece540e184cdbabc395ef52e70833ff
 Source1:	setup.rb
 URL:		http://www.deveiate.org/code/PluginFactory.html
+BuildRequires:	rpmbuild(macros) >= 1.263
 BuildRequires:	ruby
 BuildRequires:	ruby-devel
 Requires:	ruby
@@ -26,10 +24,9 @@ Implementacja wzorca PluginFactory w jêzyku Ruby.
 
 %prep
 %setup -q -n PluginFactory-%{version}
-
-%build
 cp %{SOURCE1} .
 
+%build
 ruby setup.rb config \
 	--siterubyver=%{ruby_rubylibdir} \
 	--sodir=%{ruby_archdir}
