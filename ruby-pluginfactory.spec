@@ -2,7 +2,7 @@ Summary:	Ruby PluginFactory pattern
 Summary(pl):	Wzorzec PluginFactory w Rubym
 Name:		ruby-pluginfactory
 Version:	1.0.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages
 Source0:	http://www.deveiate.org/code/PluginFactory-%{version}.tar.gz
@@ -10,9 +10,9 @@ Source0:	http://www.deveiate.org/code/PluginFactory-%{version}.tar.gz
 Source1:	setup.rb
 URL:		http://www.deveiate.org/code/PluginFactory.html
 BuildRequires:	rpmbuild(macros) >= 1.263
-BuildRequires:	ruby
+BuildRequires:	ruby-modules
 BuildRequires:	ruby-devel
-Requires:	ruby
+Requires:	ruby-modules
 #BuildArch: noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
