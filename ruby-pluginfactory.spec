@@ -10,7 +10,6 @@ Source0:	http://www.deveiate.org/code/PluginFactory-%{version}.tar.gz
 Source1:	setup.rb
 URL:		http://www.deveiate.org/code/PluginFactory.html
 BuildRequires:	rpmbuild(macros) >= 1.263
-BuildRequires:	ruby-modules
 BuildRequires:	ruby-devel
 Requires:	ruby-modules
 #BuildArch: noarch
