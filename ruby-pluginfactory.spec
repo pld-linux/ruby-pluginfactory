@@ -1,5 +1,5 @@
 Summary:	Ruby PluginFactory pattern
-Summary(pl):	Wzorzec PluginFactory w Rubym
+Summary(pl.UTF-8):   Wzorzec PluginFactory w Rubym
 Name:		ruby-pluginfactory
 Version:	1.0.1
 Release:	2
@@ -18,8 +18,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Ruby implementation of the PluginFactory pattern.
 
-%description -l pl
-Implementacja wzorca PluginFactory w jêzyku Ruby.
+%description -l pl.UTF-8
+Implementacja wzorca PluginFactory w jÄ™zyku Ruby.
 
 %prep
 %setup -q -n PluginFactory-%{version}
